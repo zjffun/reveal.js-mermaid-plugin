@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>reveal.js-mermaid-plugin</title>
+
+    <meta name="description" content="A mermaid plugin for reveal.js." />
+    <meta name="author" content="JuFeng Zhang" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.2.1/dist/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.2.1/dist/reveal.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.2.1/dist/theme/black.css"
+      id="theme"
+    />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h3>Flowchart</h3>
+          <div class="mermaid">
+            <pre>
+              %%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
+              flowchart TD
+                A[Start] --> B{Is it?};
+                B -- Yes --> C[OK];
+                C --> D[Rethink];
+                D --> B;
+                B -- No ----> E[End];
+            </pre>
+          </div>
+        </section>
+
+        <section>
+          <h3>Sequence Diagram</h3>
+          <div class="mermaid">
+            <pre>
+              %%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
+              sequenceDiagram
+                Alice->>John: Hello John, how are you?
+                John-->>Alice: Great!
+                Alice-)John: See you later!
+            </pre>
+          </div>
+        </section>
+
+        <section>
+          <h3>Class Diagram</h3>
+          <div class="mermaid">
+            <pre>
+              %%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
+              classDiagram
+                Animal <|-- Duck
+                Animal <|-- Fish
+                Animal <|-- Zebra
+                Animal : +int age
+                Animal : +String gender
+                Animal: +isMammal()
+                Animal: +mate()
+                class Duck{
+                  +String beakColor
+                  +swim()
+                  +quack()
+                }
+                class Fish{
+                  -int sizeInFeet
+                  -canEat()
+                }
+                class Zebra{
+                  +bool is_wild
+                  +run()
+                }
+            </pre>
+          </div>
+        </section>
+
+        <section>
+          <h3>State Diagram</h3>
+          <div class="mermaid">
+            <pre>
+              %%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
+              stateDiagram-v2
+                [*] --> Still
+                Still --> [*]
+
+                Still --> Moving
+                Moving --> Still
+                Moving --> Crash
+                Crash --> [*]
+            </pre>
+          </div>
+        </section>
+
+        <section>
+          <h3>Entity Relationship Diagrams</h3>
+          <div class="mermaid">
+            <pre>
+              %%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
+              erDiagram
+                CUSTOMER ||--o{ ORDER : places
+                ORDER ||--|{ LINE-ITEM : contains
+                CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+            </pre>
+          </div>
+        </section>
+
+        <section>
+          <h3>User Journey Diagram</h3>
+          <div class="mermaid">
+            <pre>
+              %%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
+              stateDiagram-v2
+                [*] --> Still
+                Still --> [*]
+
+                Still --> Moving
+                Moving --> Still
+                Moving --> Crash
+                Crash --> [*]
+            </pre>
+          </div>
+        </section>
+
+        <section>
+          <h3>Gantt Diagram</h3>
+          <div class="mermaid">
+            <pre>
+              %%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
+              gantt
+                title A Gantt Diagram
+                dateFormat  YYYY-MM-DD
+                section Section
+                A task           :a1, 2014-01-01, 30d
+                Another task     :after a1  , 20d
+                section Another
+                Task in sec      :2014-01-12  , 12d
+                another task     : 24d
+            </pre>
+          </div>
+        </section>
+
+        <section>
+          <h3>Pie Chart Diagram</h3>
+          <div class="mermaid">
+            <pre>
+              %%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
+              pie title Pets adopted by volunteers
+                "Dogs" : 386
+                "Cats" : 85
+                "Rats" : 15
+            </pre>
+          </div>
+        </section>
+
+        <section>
+          <h3>Requirement Diagram</h3>
+          <div class="mermaid">
+            <pre>
+              %%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
+              requirementDiagram
+
+              requirement test_req {
+                id: 1
+                text: the test text.
+                risk: high
+                verifymethod: test
+              }
+          
+              element test_entity {
+                type: simulation
+              }
+          
+              test_entity - satisfies -> test_req
+            </pre>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.2.1/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+
+        plugins: [RevealMermaid],
+      });
+    </script>
+  </body>
+</html>
