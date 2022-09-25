@@ -31,7 +31,16 @@ const Plugin = {
         );
       } catch (error) {
         console.error(error, { graphDefinition, el });
-        el.innerHTML = error.message;
+        if(error.str){
+          // From mermaid 9.1.4, error.message does not exists anymore
+          console.trace("Error with str : ",error);
+          el.innerHTML = error.str;
+        }
+        if(error.message){
+          console.trace("Error with message : ",error);
+          el.innerHTML = error.message;
+        }
+
       }
     });
   },
