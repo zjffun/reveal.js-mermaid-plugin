@@ -1,6 +1,6 @@
 {
   "name": "reveal.js-mermaid-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A mermaid plugin for reveal.js.",
   "homepage": "https://zjffun.github.io/reveal.js-mermaid-plugin",
   "main": "plugin/mermaid/mermaid.js",
@@ -40,12 +40,16 @@
     "glob": "^7.1.7",
     "gulp": "^4.0.2",
     "gulp-connect": "^5.7.0",
-    "mermaid": "^8.13.5",
+    "mermaid": "^9.1.7",
     "node-qunit-puppeteer": "^2.1.0",
     "qunit": "^2.17.2",
     "rollup": "^2.48.0",
     "rollup-plugin-terser": "^7.0.2",
     "yargs": "^15.1.0"
   },
-  "browserslist": "> 0.5%, IE 11, not dead"
+  "browserslist": [
+    "> 0.5%",
+    "IE 11",
+    "not dead"
+  ]
 }

@@ -7,15 +7,15 @@ A Mermaid plugin for reveal.js.
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/reveal.js@4.2.1/dist/reset.css"
+  href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reset.css"
 />
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/reveal.js@4.2.1/dist/reveal.css"
+  href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css"
 />
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/reveal.js@4.2.1/dist/theme/black.css"
+  href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/black.css"
   id="theme"
 />
 
@@ -38,7 +38,7 @@ A Mermaid plugin for reveal.js.
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.2.1/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin"></script>
 <script>
   Reveal.initialize({

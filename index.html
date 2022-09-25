@@ -18,15 +18,15 @@
 
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reveal.js@4.2.1/dist/reset.css"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reset.css"
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reveal.js@4.2.1/dist/reveal.css"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css"
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reveal.js@4.2.1/dist/theme/black.css"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/black.css"
       id="theme"
     />
   </head>
@@ -193,10 +193,30 @@
             </pre>
           </div>
         </section>
+
+        <section>
+          <h3>GitGraph Diagram</h3>
+          <div class="mermaid">
+            <pre>
+              %%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
+              gitGraph
+                commit
+                commit
+                branch develop
+                checkout develop
+                commit
+                commit
+                checkout main
+                merge develop
+                commit
+                commit
+            </pre>
+          </div>
+        </section>
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.2.1/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin"></script>
     <script>
       Reveal.initialize({
