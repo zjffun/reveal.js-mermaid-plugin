@@ -1,3 +1,6 @@
+[![jsdelivr][jsdelivr-badge]][jsdelivr-link]
+[![npm version][fury-badge]][fury-link]
+
 # [reveal.js-mermaid-plugin](https://zjffun.github.io/reveal.js-mermaid-plugin)
 
 A Mermaid plugin for reveal.js.
@@ -58,3 +61,8 @@ A Mermaid plugin for reveal.js.
   });
 </script>
 ```
+
+[fury-link]: https://badge.fury.io/js/reveal.js-mermaid-plugin
+[fury-badge]: https://badge.fury.io/js/reveal.js-mermaid-plugin.svg
+[jsdelivr-link]: https://www.jsdelivr.com/package/npm/reveal.js-mermaid-plugin
+[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/reveal.js-mermaid-plugin/badge
