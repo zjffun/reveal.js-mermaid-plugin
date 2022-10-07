@@ -4,16 +4,20 @@
 
 import mermaid from "mermaid";
 
-mermaid.mermaidAPI.initialize({
-  // The node size will be calculated incorrectly if set `startOnLoad: start`,
-  // so we need to manually render.
-  startOnLoad: false,
-});
-
 const Plugin = {
   id: "mermaid",
 
   init: function (reveal) {
+
+    let { ...mermaidConfig } = reveal.getConfig().mermaid || {};
+
+    mermaid.mermaidAPI.initialize({
+      // The node size will be calculated incorrectly if set `startOnLoad: start`,
+      // so we need to manually render.
+      startOnLoad: false,
+      ...mermaidConfig,
+    });
+
     const mermaidEls = reveal.getRevealElement().querySelectorAll(".mermaid");
 
     Array.from(mermaidEls).forEach(function (el) {
