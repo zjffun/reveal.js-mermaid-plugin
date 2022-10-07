@@ -47,6 +47,13 @@ A Mermaid plugin for reveal.js.
     center: true,
     hash: true,
 
+    // mermaid initialize config
+    mermaid: {
+      // flowchart: {
+      //   curve: 'linear',
+      // },
+    },
+
     plugins: [RevealMermaid],
   });
 </script>
