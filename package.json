@@ -1,6 +1,6 @@
 {
   "name": "reveal.js-mermaid-plugin",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A mermaid plugin for reveal.js.",
   "homepage": "https://zjffun.github.io/reveal.js-mermaid-plugin",
   "main": "plugin/mermaid/mermaid.js",
