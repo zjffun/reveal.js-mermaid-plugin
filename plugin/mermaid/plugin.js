@@ -2,16 +2,15 @@
  * reveal.js Mermaid plugin
  */
 
-import mermaid from "mermaid";
+import mermaid from "mermaid/dist/mermaid.js";
 
 const Plugin = {
   id: "mermaid",
 
   init: function (reveal) {
-
     let { ...mermaidConfig } = reveal.getConfig().mermaid || {};
 
-    mermaid.mermaidAPI.initialize({
+    mermaid.initialize({
       // The node size will be calculated incorrectly if set `startOnLoad: start`,
       // so we need to manually render.
       startOnLoad: false,
@@ -25,14 +24,18 @@ const Plugin = {
         el.innerHTML = svgCode;
       };
 
+      // Using textContent not innerHTML, because innerHTML will get escaped code (eg: get --&gt; instead of -->).
       var graphDefinition = el.textContent.trim();
 
       try {
-        mermaid.mermaidAPI.render(
-          `mermaid-${Math.random().toString(36).substring(2)}`,
-          graphDefinition,
-          insertSvg
-        );
+        mermaid
+          .render(
+            `mermaid-${Math.random().toString(36).substring(2)}`,
+            graphDefinition
+          )
+          .then(({ svg }) => {
+            insertSvg(svg);
+          });
       } catch (error) {
         let errorStr = "";
         if (error?.str) {
