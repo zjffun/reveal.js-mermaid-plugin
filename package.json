@@ -10,7 +10,8 @@
     "prepublishOnly": "yarn run build",
     "test": "gulp test",
     "start": "gulp serve",
-    "build": "gulp build"
+    "build": "gulp build",
+    "afterRelease": "node ./scripts/after-release.mjs"
   },
   "author": {
     "name": "JuFeng Zhang",
