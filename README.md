@@ -3,7 +3,7 @@
 
 # [reveal.js-mermaid-plugin](https://zjffun.github.io/reveal.js-mermaid-plugin)
 
-A Mermaid plugin for reveal.js.
+A [Mermaid](https://mermaid.js.org/) plugin for reveal.js.
 
 ## Usage
 

@@ -1710,7 +1710,7 @@ cytoscape-cose-bilkent@^4.1.0:
 
 cytoscape@^3.28.1:
   version "3.28.1"
-  resolved "https://registry.yarnpkg.com/cytoscape/-/cytoscape-3.28.1.tgz#f32c3e009bdf32d47845a16a4cd2be2bbc01baf7"
+  resolved "https://registry.npmjs.org/cytoscape/-/cytoscape-3.28.1.tgz#f32c3e009bdf32d47845a16a4cd2be2bbc01baf7"
   integrity sha512-xyItz4O/4zp9/239wCcH8ZcFuuZooEeF8KHRmzjDfGdXsj3OG9MFSMA0pJE0uX3uCN/ygof6hHf4L7lst+JaDg==
   dependencies:
     heap "^0.2.6"
@@ -2170,7 +2170,7 @@ electron-to-chromium@^1.4.251:
 
 elkjs@^0.9.0:
   version "0.9.1"
-  resolved "https://registry.yarnpkg.com/elkjs/-/elkjs-0.9.1.tgz#fd1524b3f0bed72dc65ba107ae91bcf04b5582bd"
+  resolved "https://registry.npmjs.org/elkjs/-/elkjs-0.9.1.tgz#fd1524b3f0bed72dc65ba107ae91bcf04b5582bd"
   integrity sha512-JWKDyqAdltuUcyxaECtYG6H4sqysXSLeoXuGUBfRNESMTkj+w+qdb0jya8Z/WI0jVd03WQtCGhS6FOFtlhD5FQ==
 
 emoji-regex@^8.0.0:
@@ -3342,7 +3342,7 @@ merge-stream@^2.0.0:
 
 mermaid@^10.8.0:
   version "10.8.0"
-  resolved "https://registry.yarnpkg.com/mermaid/-/mermaid-10.8.0.tgz#557123be494e216a9173bbaca3b5be5551428644"
+  resolved "https://registry.npmjs.org/mermaid/-/mermaid-10.8.0.tgz#557123be494e216a9173bbaca3b5be5551428644"
   integrity sha512-9CzfSreRjdDJxX796+jW4zjEq0DVw5xVF0nWsqff8OTbrt+ml0TZ5PyYUjjUZJa2NYxYJZZXewEquxGiM8qZEA==
   dependencies:
     "@braintree/sanitize-url" "^6.0.1"
