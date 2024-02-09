@@ -66,3 +66,5 @@ A [Mermaid](https://mermaid.js.org/) plugin for reveal.js.
 [fury-badge]: https://badge.fury.io/js/reveal.js-mermaid-plugin.svg
 [jsdelivr-link]: https://www.jsdelivr.com/package/npm/reveal.js-mermaid-plugin
 [jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/reveal.js-mermaid-plugin/badge
+
+## [Release Notes](./CHANGELOG.md)
