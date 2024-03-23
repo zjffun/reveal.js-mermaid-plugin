@@ -20,6 +20,10 @@ const Plugin = {
     const mermaidEls = reveal.getRevealElement().querySelectorAll(".mermaid");
 
     Array.from(mermaidEls).forEach(function (el) {
+      if (el.firstElementChild instanceof SVGElement) {
+        // Skip if the element is already rendered
+        return;
+      }
       var insertSvg = function (svgCode, bindFunctions) {
         el.innerHTML = svgCode;
       };
