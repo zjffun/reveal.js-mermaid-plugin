@@ -1,3 +1,7 @@
+# v2.3.0
+
+- 
+
 # v2.2.0
 
 - [@kriberg (Kristian Berg)](https://github.com/kriberg): Update to mermaid 10.8.0. [PR #10](https://github.com/zjffun/reveal.js-mermaid-plugin/pull/10)

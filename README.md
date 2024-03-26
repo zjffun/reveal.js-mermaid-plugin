@@ -57,6 +57,18 @@ A [Mermaid](https://mermaid.js.org/) plugin for reveal.js.
       // },
     },
 
+    // this plugin config
+    // mermaidPlugin: {
+    //   beforeRender(el) {
+    //     console.log(el);
+    //     // if return false this element will not call mermaid render
+    //   },
+    //
+    //   afterRender(el) {
+    //     console.log(el);
+    //   },
+    // },
+
     plugins: [RevealMermaid],
   });
 </script>

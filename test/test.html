@@ -200,7 +200,7 @@
 
         <section>
           <h3>Mindmap</h3>
-          <div class="mermaid" style="height: 400px; overflow: auto;">
+          <div class="mermaid" style="height: 400px; overflow: auto">
             <pre>
               mindmap
                 root((mindmap))
@@ -238,6 +238,23 @@
         </section>
 
         <section>
+          <h3>Config</h3>
+          <div class="mermaid mermaid-before-render-config"></div>
+          <div class="mermaid mermaid-before-render-config-return-false">
+            <pre>
+              flowchart TD
+                A --> B
+            </pre>
+          </div>
+          <div class="mermaid mermaid-after-render-config">
+            <pre>
+              flowchart TD
+                A --> B
+            </pre>
+          </div>
+        </section>
+
+        <section>
           <h3>Error</h3>
           <div class="mermaid mermaid-parse-error">
             <pre>
@@ -262,6 +279,27 @@
         center: true,
         hash: true,
 
+        mermaidPlugin: {
+          beforeRender(el) {
+            if (el.classList.contains("mermaid-before-render-config")) {
+              el.innerHTML = `flowchart TD\nA --> B`;
+              return;
+            }
+
+            if (
+              el.classList.contains("mermaid-before-render-config-return-false")
+            ) {
+              return false;
+            }
+          },
+
+          afterRender(el) {
+            if (el.classList.contains("mermaid-after-render-config")) {
+              el.dataset.testSuccess = "true";
+            }
+          },
+        },
+
         plugins: [RevealMermaid],
       }).then(function () {
         QUnit.module("DOM");
@@ -270,6 +308,33 @@
           var svgs = document.querySelectorAll(".reveal .slides .mermaid svg");
 
           assert.ok(svgs.length > 0);
+        });
+
+        QUnit.test("Mermaid beforeRender config", function (assert) {
+          var svg = document.querySelector(
+            ".reveal .slides .mermaid-before-render-config svg"
+          );
+
+          assert.ok(svg);
+        });
+
+        QUnit.test(
+          "Mermaid beforeRender config return false",
+          function (assert) {
+            var svg = document.querySelector(
+              ".reveal .slides .mermaid-before-render-config-return-false svg"
+            );
+
+            assert.ok(!svg);
+          }
+        );
+
+        QUnit.test("Mermaid afterRender config", function (assert) {
+          var el = document.querySelector(
+            ".reveal .slides .mermaid-after-render-config"
+          );
+
+          assert.ok(el.dataset.testSuccess === "true");
         });
 
         QUnit.test("Mermaid Parse Error", function (assert) {
