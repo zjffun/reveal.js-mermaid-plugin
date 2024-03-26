@@ -42,7 +42,7 @@ A [Mermaid](https://mermaid.js.org/) plugin for reveal.js.
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin@2.2.0/plugin/mermaid/mermaid.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin@2.3.0/plugin/mermaid/mermaid.js"></script>
 <script>
   Reveal.initialize({
     controls: true,
@@ -56,6 +56,18 @@ A [Mermaid](https://mermaid.js.org/) plugin for reveal.js.
       //   curve: 'linear',
       // },
     },
+
+    // this plugin config
+    // mermaidPlugin: {
+    //   beforeRender(el) {
+    //     console.log(el);
+    //     // if return false this element will not call mermaid render
+    //   },
+    //
+    //   afterRender(el) {
+    //     console.log(el);
+    //   },
+    // },
 
     plugins: [RevealMermaid],
   });
