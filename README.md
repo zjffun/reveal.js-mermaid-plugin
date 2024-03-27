@@ -10,15 +10,15 @@ A [Mermaid](https://mermaid.js.org/) plugin for reveal.js.
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reset.css"
+  href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.5/dist/reset.css"
 />
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css"
+  href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.5/dist/reveal.css"
 />
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/black.css"
+  href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.5/dist/theme/black.css"
   id="theme"
 />
 
@@ -41,7 +41,7 @@ A [Mermaid](https://mermaid.js.org/) plugin for reveal.js.
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.5/dist/reveal.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin@2.3.0/plugin/mermaid/mermaid.js"></script>
 <script>
   Reveal.initialize({
@@ -74,9 +74,15 @@ A [Mermaid](https://mermaid.js.org/) plugin for reveal.js.
 </script>
 ```
 
+## Q&A
+
+### Can I use Mermaid JavaScript API instead of this plugin?
+
+[Calling the Mermaid JavaScript API](https://mermaid.js.org/intro/getting-started.html#_4-calling-the-mermaid-javascript-api) is great, but currently, using Mermaid `startOnLoad` with reveal.js will wrong in some case like [this example](https://codepen.io/1010543618/pen/poBrEGE).
+
+## [Release Notes](./CHANGELOG.md)
+
 [fury-link]: https://badge.fury.io/js/reveal.js-mermaid-plugin
 [fury-badge]: https://badge.fury.io/js/reveal.js-mermaid-plugin.svg
 [jsdelivr-link]: https://www.jsdelivr.com/package/npm/reveal.js-mermaid-plugin
 [jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/reveal.js-mermaid-plugin/badge
-
-## [Release Notes](./CHANGELOG.md)
