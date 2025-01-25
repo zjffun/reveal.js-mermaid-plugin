@@ -2,7 +2,7 @@
  * reveal.js Mermaid plugin
  */
 
-import mermaid from "mermaid/dist/mermaid.js";
+import mermaid from "mermaid/dist/mermaid.esm.mjs";
 
 async function renderMermaid({ el, beforeRender, afterRender }) {
   const beforeRenderRes = await beforeRender?.(el);
