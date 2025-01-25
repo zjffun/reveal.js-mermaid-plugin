@@ -67,12 +67,14 @@ gulp.task("plugins", () => {
           file: plugin.output + ".esm.js",
           name: plugin.name,
           format: "es",
+          inlineDynamicImports: true,
         });
 
         bundle.write({
           file: plugin.output + ".js",
           name: plugin.name,
           format: "umd",
+          inlineDynamicImports: true,
         });
       });
     })
