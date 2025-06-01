@@ -1,3 +1,7 @@
+# v11.6.0
+
+- Update to mermaid 11.6.0.
+
 # v11.4.1
 
 - [@evgeni (Evgeni Golov)](https://github.com/evgeni): Update to mermaid 11.4.1. [PR #13](https://github.com/zjffun/reveal.js-mermaid-plugin/pull/13)
