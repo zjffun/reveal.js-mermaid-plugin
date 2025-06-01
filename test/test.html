@@ -268,14 +268,19 @@
           </div>
         </section>
 
-        <section>
+        <section class="mermaid-img">
           <h3>Image</h3>
+          <style>
+            .mermaid-img foreignObject .nodeLabel img {
+              margin: 0;
+            }
+          </style>
           <div class="mermaid">
             <pre>
               %%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
               flowchart TD
-                A@{ img: "https://placehold.co/600x400", label: "Image Label", pos: "t", w: 60, h: 60, constraint: "off" }
-                B[&lt;img src="https://placehold.co/600x400"/&gt;]
+                A@{ img: "https://placehold.co/60x60", label: "Image Label", pos: "t", w: 60, h: 60, constraint: "on" }
+                B[&lt;img src="https://placehold.co/60x40"/&gt;]
             </pre>
           </div>
         </section>
