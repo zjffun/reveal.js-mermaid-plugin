@@ -53,6 +53,10 @@ const Plugin = {
     const { ...mermaidConfig } = reveal.getConfig().mermaid || {};
     const { ...mermaidPluginConfig } = reveal.getConfig().mermaidPlugin || {};
 
+    if (mermaidPluginConfig.iconPacks) {
+      mermaid.registerIconPacks(mermaidPluginConfig.iconPacks);
+    }
+
     const renderMermaidEl = getRenderMermaidEl({
       beforeRender: mermaidPluginConfig.beforeRender,
       afterRender: mermaidPluginConfig.afterRender,
