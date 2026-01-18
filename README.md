@@ -67,6 +67,8 @@ A [Mermaid](https://mermaid.js.org/) plugin for reveal.js.
     //   afterRender(el) {
     //     console.log(el);
     //   },
+    //
+    //   iconPacks: [], // Passed to mermaid.registerIconPacks(). https://mermaid.ai/open-source/config/icons.html
     // },
 
     plugins: [RevealMermaid],
