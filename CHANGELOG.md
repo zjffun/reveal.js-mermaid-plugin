@@ -1,3 +1,8 @@
+# v11.12.2
+
+- [@mfp22 (Mike Pearson)](https://github.com/mfp22): Enable registering icon packs. [PR #17](https://github.com/zjffun/reveal.js-mermaid-plugin/pull/17)
+- Update to mermaid 11.12.2.
+
 # v11.6.0
 
 - Update to mermaid 11.6.0.
