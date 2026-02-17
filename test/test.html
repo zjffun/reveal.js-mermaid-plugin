@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -285,6 +285,22 @@
           </div>
         </section>
 
+        <section class="mermaid-html-tags">
+          <h3>HTML Tags</h3>
+
+          <div class="mermaid">
+            <pre>
+              %%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
+              flowchart TD
+                A[Start] --> B{Is it?};
+                B -- Yes --> C[OK <br> Some text];
+                C --> D[Rethink];
+                D --> B;
+                B -- No ----> E[End];
+            </pre>
+          </div>
+        </section>
+
         <section>
           <h3>Config</h3>
           <div class="mermaid mermaid-before-render-config"></div>
@@ -360,7 +376,7 @@
 
         QUnit.test("Mermaid beforeRender config", function (assert) {
           var svg = document.querySelector(
-            ".reveal .slides .mermaid-before-render-config svg"
+            ".reveal .slides .mermaid-before-render-config svg",
           );
 
           assert.ok(svg);
@@ -370,16 +386,16 @@
           "Mermaid beforeRender config return false",
           function (assert) {
             var svg = document.querySelector(
-              ".reveal .slides .mermaid-before-render-config-return-false svg"
+              ".reveal .slides .mermaid-before-render-config-return-false svg",
             );
 
             assert.ok(!svg);
-          }
+          },
         );
 
         QUnit.test("Mermaid afterRender config", function (assert) {
           var el = document.querySelector(
-            ".reveal .slides .mermaid-after-render-config"
+            ".reveal .slides .mermaid-after-render-config",
           );
 
           assert.ok(el.dataset.testSuccess === "true");
@@ -387,7 +403,7 @@
 
         QUnit.test("Mermaid Parse Error", function (assert) {
           var parseErrorMermaid = document.querySelector(
-            ".reveal .slides .mermaid-parse-error"
+            ".reveal .slides .mermaid-parse-error",
           );
 
           assert.ok(/error/i.test(parseErrorMermaid.innerHTML));

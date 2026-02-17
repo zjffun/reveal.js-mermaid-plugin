@@ -5,9 +5,18 @@
 import mermaid from "mermaid/dist/mermaid.esm.mjs";
 
 function decodeHtml(html) {
-    var txt = document.createElement("textarea");
-    txt.innerHTML = html;
-    return txt.value;
+  var txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return txt.value;
+}
+
+function getInnerHtml(el) {
+  let contentEl = el;
+  const firstElementChild = el?.firstElementChild;
+  if (firstElementChild?.tagName?.toLowerCase() === "pre") {
+    contentEl = firstElementChild;
+  }
+  return contentEl?.innerHTML?.trim();
 }
 
 async function renderMermaid({ el, beforeRender, afterRender }) {
@@ -17,12 +26,13 @@ async function renderMermaid({ el, beforeRender, afterRender }) {
     return;
   }
 
-  const graphDefinition = decodeHtml(el.innerHTML.trim());
+  const html = getInnerHtml(el);
+  const graphDefinition = decodeHtml(html);
 
   try {
     const { svg: svgCode } = await mermaid.render(
       `mermaid-${Math.random().toString(36).substring(2)}`,
-      graphDefinition
+      graphDefinition,
     );
     el.innerHTML = svgCode;
 

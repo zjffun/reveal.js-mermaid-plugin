@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -299,6 +299,22 @@
             </pre>
           </div>
         </section>
+
+        <section class="mermaid-html-tags">
+          <h3>HTML Tags</h3>
+
+          <div class="mermaid">
+            <pre>
+              %%{init: {'theme': 'dark', 'themeVariables': { 'darkMode': true }}}%%
+              flowchart TD
+                A[Start] --> B{Is it?};
+                B -- Yes --> C[OK <br> Some text];
+                C --> D[Rethink];
+                D --> B;
+                B -- No ----> E[End];
+            </pre>
+          </div>
+        </section>
       </div>
     </div>
 
@@ -312,7 +328,7 @@
         hash: true,
 
         // mermaid initialize config
-         mermaid: {
+        mermaid: {
           // flowchart: {
           //   curve: 'linear',
           // },
@@ -329,7 +345,6 @@
         },
 
         plugins: [RevealMermaid],
-
       });
     </script>
   </body>
