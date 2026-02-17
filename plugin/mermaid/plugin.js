@@ -4,6 +4,12 @@
 
 import mermaid from "mermaid/dist/mermaid.esm.mjs";
 
+function decodeHtml(html) {
+    var txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+}
+
 async function renderMermaid({ el, beforeRender, afterRender }) {
   const beforeRenderRes = await beforeRender?.(el);
 
@@ -11,8 +17,7 @@ async function renderMermaid({ el, beforeRender, afterRender }) {
     return;
   }
 
-  // Using textContent not innerHTML, because innerHTML will get escaped code (eg: get --&gt; instead of -->).
-  const graphDefinition = el.textContent.trim();
+  const graphDefinition = decodeHtml(el.innerHTML.trim());
 
   try {
     const { svg: svgCode } = await mermaid.render(
