@@ -1,3 +1,7 @@
+# v11.12.3
+
+- [@JJK96 (Jan-Jaap Korpershoek)](https://github.com/JJK96): Fix HTML escapes. [PR #19](https://github.com/zjffun/reveal.js-mermaid-plugin/pull/19)
+
 # v11.12.2
 
 - [@mfp22 (Mike Pearson)](https://github.com/mfp22): Enable registering icon packs. [PR #17](https://github.com/zjffun/reveal.js-mermaid-plugin/pull/17)

@@ -42,7 +42,7 @@ A [Mermaid](https://mermaid.js.org/) plugin for reveal.js.
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.5/dist/reveal.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin@11.12.2/plugin/mermaid/mermaid.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin@11.12.3/plugin/mermaid/mermaid.js"></script>
 <script>
   Reveal.initialize({
     controls: true,
